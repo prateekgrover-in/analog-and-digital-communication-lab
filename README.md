@@ -1,43 +1,32 @@
-# Analog and Digital Communication Lab
+# Communication systems lab
 
-MATLAB lab work from a university course on analog and digital communication.
-Each folder is one lab session, evaluated with a task-by-task deliverable
-(`Eval_Lab*_Task*_*.m`) and a writeup PDF.
+MATLAB lab work from a university course on communication systems. Each folder is one lab session, with its scripts and a writeup PDF.
 
-## Information Signals
+## Information signals
 
-- **Task 1** — records/loads a voice signal, plots it in the time domain, and
-  takes its FFT to inspect the frequency content of recorded speech.
-- **Task 2** — synthesizes DTMF-style dial and ringing tones from sums of two
-  sinusoids at telephony frequencies (e.g. 350 Hz + 440 Hz).
-- **Task 3** — encodes a sentence into its binary (7-bit ASCII) representation
-  as a simple illustration of source encoding.
+- **`recorded_voice_analysis.m`**: records or loads a voice signal, plots it in the time domain, and takes its FFT to inspect the frequency content of recorded speech.
+- **`tone_generation.m`**: synthesizes DTMF-style dial and ringing tones from sums of two sinusoids at telephony frequencies (350 Hz and 440 Hz, for example).
+- **`text_to_binary_encoding.m`**: encodes a sentence into its binary (7-bit ASCII) representation as a simple illustration of source encoding.
 
-See `Document for Time Plots.pdf` for the accompanying writeup.
+`recorded_voice_analysis.m` expects a `Recording for Task1.mp3` audio file alongside it, which isn't bundled here. Supply your own to run it.
 
-## Communication Channels
+See `lab_report.pdf` for the accompanying writeup.
 
-- **Task 1** — models a twisted-pair wire's per-unit-length R, L, G, C at a
-  fixed frequency, derives the propagation constant Ξ³, and plots channel
-  attenuation (dB) as a function of distance (100 m–2000 m).
-- **Task 2** — applies the Friis free-space path loss equation to compare
-  received power vs. distance at two carrier frequencies (900 MHz and 2.4 GHz).
+## Communication channels
 
-See `Lab3_Document_Prateek_Grover.pdf` for the accompanying writeup.
+- **`channel_attenuation_vs_distance.m`**: models a twisted-pair wire's per-unit-length R, L, G, and C at a fixed frequency, derives the propagation constant, and plots channel attenuation in dB as a function of distance (100 m to 2000 m).
+- **`path_loss_vs_frequency.m`**: applies the Friis free-space path loss equation to compare received power against distance at two carrier frequencies, 900 MHz and 2.4 GHz.
 
-## Signal Bandwidth
+See `lab_report.pdf` for the accompanying writeup.
 
-- **Task 1** — compares the frequency-domain spectra of rectangular pulses of
-  different widths to show the inverse relationship between pulse duration
-  and bandwidth.
-- **Task 2** — passes a rectangular pulse through an ideal low-pass filter
-  (`sinc` impulse response) and examines the resulting time-domain output.
-- **Task 3** — amplitude-modulates a `sinc` baseband signal onto a carrier and
-  inspects the modulated signal's spectrum.
+## Signal bandwidth
 
-See `Lab 4_ Prateek Grover.pdf` for the accompanying writeup.
+- **`pulse_width_vs_bandwidth.m`**: compares the frequency-domain spectra of rectangular pulses of different widths to show the inverse relationship between pulse duration and bandwidth.
+- **`lowpass_filter_response.m`**: passes a rectangular pulse through an ideal low-pass filter (`sinc` impulse response) and examines the resulting time-domain output.
+- **`am_modulation_spectrum.m`**: amplitude-modulates a `sinc` baseband signal onto a carrier and inspects the modulated signal's spectrum.
+
+See `lab_report.pdf` for the accompanying writeup.
 
 ## Running
 
-Each `.m` file is self-contained — open it in MATLAB (or GNU Octave) and run
-it directly; every script produces its own figure(s).
+Each `.m` file is self-contained. Open it in MATLAB (or GNU Octave) and run it directly, every script produces its own figures.
