@@ -1,5 +1,0 @@
-%Lab 2 : Task 3 - Prateek Grover
-
-entropy = 'The entropy was originally created by Shannon as part of his theory of communication, in which a data communication system is composed of three elements: a source of data, a communication channel, and a receiver.';
-bin_entropy = dec2bin(entropy);
-re_bin = reshape(bin_entropy,[1,37*7])
